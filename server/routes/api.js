@@ -206,7 +206,7 @@ router.get('/analytics', (req, res) => {
     `).all(`${currentMonth}%`, `${lastMonth}%`);
 
     // Subscriptions
-    const subscriptions = db.prepare('SELECT * FROM subscriptions WHERE status = "active" ORDER BY amount DESC').all();
+    const subscriptions = db.prepare("SELECT * FROM subscriptions WHERE status = 'active' ORDER BY amount DESC").all();
 
     // Budget utilization
     const budgets = db.prepare(`
